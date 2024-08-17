@@ -1,0 +1,18 @@
+git config --global user.name kerolous11
+git config --global user.email kerolousromany59@gmail.com
+git clone https://github.com/kerolous11/OSC_Task.git
+cd ./OSC_Task
+mkdir task-2
+cd ./task-2
+touch greeting.txt
+echo "hello world" >> greeting.txt
+git add greeting.txt
+git commit -m "Added greeting"
+git checkout -b intro
+echo "I love Git" >> greeting.txt
+git add greeting.txt
+git commit -m "Added I love Git"
+git checkout main
+git merge intro
+git tag -a v1 -m "description of v1"
+git push origin main
